@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main-div {
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
+.left-bar {
+  background-color: aquamarine;
+  height: 100vh;
+}
+
+.right-bar {
+  background-color: bisque;
+}
