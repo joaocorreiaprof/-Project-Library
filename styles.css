@@ -7,12 +7,59 @@
   display: grid;
   grid-template-columns: 20% 80%;
 }
-
-.left-bar {
-  background-color: aquamarine;
+/*left side */
+.left-side {
+  display: flex;
+  flex-direction: column;
   height: 100vh;
+  align-items: center;
+  background-color: #fdf6e3; /* Base color similar to paper */
+  background-image: radial-gradient(
+      circle at 10% 20%,
+      #ffffff 10%,
+      transparent 20%
+    ),
+    radial-gradient(circle at 80% 30%, #ffffff 10%, transparent 20%),
+    radial-gradient(circle at 70% 80%, #ffffff 10%, transparent 20%);
+  background-size: 40px 40px;
+  border-radius: 10px; /* Optional: Add rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+  padding: 20px; /* Optional: Add some padding to the div */
+}
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: 12px;
 }
 
-.right-bar {
-  background-color: bisque;
+.sideIcon {
+  height: 53px;
+  margin-left: 10px;
+  margin-right: 5px;
+}
+
+.profile {
+  width: 70%;
+}
+
+.icon-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 2%;
+  font-size: 20px;
+  padding: 2px;
+}
+
+.icon {
+  height: 30px;
+  margin-right: 10px;
+}
+
+/*right side*/
+
+.right-side {
+  background-color: #e5e5e5;
 }
