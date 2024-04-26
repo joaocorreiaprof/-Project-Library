@@ -149,7 +149,40 @@
           </div>
         </div>
         <div class="form">
-          <p>World</p>
+          <form action="" method="get">
+            <h3>Tell us about the book</h3>
+            <div class="book-info">
+              <div class="form-div">
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" required />
+              </div>
+              <div class="form-div">
+                <label for="author">Author</label>
+                <input type="text" name="author" id="author" required />
+              </div>
+              <div class="form-div">
+                <label for="pages">Number of Pages</label>
+                <input type="number" name="pages" id="pages" required />
+              </div>
+              <div class="form-div">
+                <label for="readed">Readed</label>
+                <input type="checkbox" name="readed" id="readed" />
+              </div>
+              <div class="form-div" id="ratingInput">
+                <label for="rating">Rating</label>
+                <div class="rating">
+                  <span id="star5" data-value="5">&#x2606;</span>
+                  <span id="star4" data-value="4">&#x2606;</span>
+                  <span id="star3" data-value="3">&#x2606;</span>
+                  <span id="star2" data-value="2">&#x2606;</span>
+                  <span id="star1" data-value="1">&#x2606;</span>
+                </div>
+              </div>
+            </div>
+            <div class="div-button">
+              <button type="submit" class="btn">+</button>
+            </div>
+          </form>
         </div>
       </div>
       <div class="right-side">

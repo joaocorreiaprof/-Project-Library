@@ -1,6 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
 * {
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: Roboto;
 }
 
 .main-div {
@@ -8,23 +14,14 @@
   grid-template-columns: 20% 80%;
 }
 /*left side */
+
 .left-side {
   display: flex;
   flex-direction: column;
   height: 100vh;
   align-items: center;
-  background-color: #fdf6e3; /* Base color similar to paper */
-  background-image: radial-gradient(
-      circle at 10% 20%,
-      #ffffff 10%,
-      transparent 20%
-    ),
-    radial-gradient(circle at 80% 30%, #ffffff 10%, transparent 20%),
-    radial-gradient(circle at 70% 80%, #ffffff 10%, transparent 20%);
-  background-size: 40px 40px;
-  border-radius: 10px; /* Optional: Add rounded corners */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
-  padding: 20px; /* Optional: Add some padding to the div */
+  justify-content: space-around;
+  background-color: #d4d4d4;
 }
 .brand {
   display: flex;
@@ -38,6 +35,10 @@
   height: 53px;
   margin-left: 10px;
   margin-right: 5px;
+}
+
+.icon path {
+  fill: #dc2626;
 }
 
 .profile {
@@ -56,6 +57,46 @@
 .icon {
   height: 30px;
   margin-right: 10px;
+}
+
+/*Form style */
+
+.form {
+  background-color: #dc2626;
+  padding: 20px;
+  border: 2px solid #797979;
+  border-radius: 15px;
+  font-size: 24px;
+}
+
+.book-info {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.form-div {
+  display: flex;
+  flex-direction: column;
+  margin: 4px 0px;
+}
+
+/*Stars*/
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  text-align: center;
+}
+.rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+}
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+  content: "\2605";
+  position: absolute;
+  color: gold;
 }
 
 /*right side*/
