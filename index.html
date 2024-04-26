@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project: Library</title>
     <link rel="stylesheet" href="./styles.css" />
+    <script
+      src="https://kit.fontawesome.com/0cba386eeb.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="main-div">
@@ -186,7 +190,52 @@
         </div>
       </div>
       <div class="right-side">
-        <h1>World</h1>
+        <div class="header">
+          <div class="top-header">
+            <input type="text" placeholder="Search..." />
+            <button class="btn">
+              <i class="fa-solid fa-heart"></i>
+            </button>
+            <button class="btn">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+          </div>
+          <div class="bottom-header">
+            <img src="./images/user.jpeg" alt="User image" />
+            <div>
+              <div class="username"><p>Mister Booker</p></div>
+              <div class="level"><p>Level:2</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-container">
+          <div class="book">
+            <img
+              src="./images/divineComedy.jpg"
+              alt="Divine Comedy from Dante Alighieri"
+              class="book-image"
+            />
+            <div class="book-name">
+              <p>Divine Comedy</p>
+            </div>
+            <div class="book-author">
+              <p>Dante Alighieri</p>
+            </div>
+            <div class="number-pages">
+              <p>300 pages</p>
+            </div>
+            <div class="state">
+              <p>Readed</p>
+            </div>
+            <div class="starts">
+              <span class="book-star" data-value="5">&#x2606;</span>
+              <span class="book-star" data-value="4">&#x2606;</span>
+              <span class="book-star" data-value="3">&#x2606;</span>
+              <span class="book-star" data-value="2">&#x2606;</span>
+              <span class="book-star" data-value="1">&#x2606;</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <script src="scripts.js"></script>
