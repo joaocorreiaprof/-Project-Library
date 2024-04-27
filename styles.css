@@ -110,5 +110,50 @@ h3 {
 /*right side*/
 
 .right-side {
-  background-color: #e5e5e5;
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 10%;
+}
+
+.user-image {
+  width: 55px;
+  height: 55px;
+  border-radius: 50px;
+}
+
+.pic-buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.picture-user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.buttons-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.user-image,
+.username {
+  margin-right: 20px;
+}
+
+.search-option {
+  background-color: #f1f1f1;
+  width: 550px;
+  margin-left: 10%;
+  height: 21px;
+  border: 2px solid grey;
+  border-radius: 15px;
 }
