@@ -81,24 +81,6 @@ body {
   margin: 4px 0px;
 }
 
-/*Stars*/
-.rating {
-  unicode-bidi: bidi-override;
-  direction: rtl;
-  text-align: center;
-}
-.rating > span {
-  display: inline-block;
-  position: relative;
-  width: 1.1em;
-}
-.rating > span:hover:before,
-.rating > span:hover ~ span:before {
-  content: "\2605";
-  position: absolute;
-  color: gold;
-}
-
 h3 {
   color: white;
 }
@@ -157,3 +139,5 @@ h3 {
   border: 2px solid grey;
   border-radius: 15px;
 }
+
+/*GRID CONTIANER*/
