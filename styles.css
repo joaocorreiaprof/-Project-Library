@@ -9,19 +9,21 @@ body {
   font-family: Roboto;
 }
 
-.main-div {
-  display: grid;
-  grid-template-columns: 15% 85%;
-}
 /*left side */
 
+.main-div {
+  display: flex;
+}
+
 .left-side {
+  position: fixed;
+  top: 0;
+  bottom: 0;
   display: flex;
   flex-direction: column;
-  height: 100vh;
   align-items: center;
   justify-content: space-around;
-  background-color: #ffe5bd;
+  width: 15%; /* adjust the width as needed */
 }
 .brand {
   display: flex;
@@ -36,10 +38,6 @@ body {
   margin-left: 10px;
   margin-right: 5px;
 }
-
-/*.icon path {
-  fill: #dc2626;
-}*/
 
 .profile {
   width: 70%;
@@ -93,7 +91,12 @@ h3 {
 /*right side*/
 
 .right-side {
+  margin-left: 15%; /* Ensure the right side doesn't get overlapped by the fixed left side */
   height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
@@ -110,21 +113,10 @@ h3 {
   border-radius: 50px;
 }
 
-.pic-buttons {
-  display: flex;
-  flex-direction: row;
-}
-
 .picture-user {
   display: flex;
   flex-direction: row;
   align-items: center;
-}
-
-.buttons-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
 }
 
 .user-image,
@@ -141,7 +133,25 @@ h3 {
   border-radius: 15px;
 }
 
+/*Publicity*/
+
+.publicity {
+  height: 32vh;
+  width: 100%;
+}
+
+#publicity-image {
+  height: 100%;
+  width: 100%;
+}
+
 /*GRID CONTIANER*/
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
+  margin-top: 50px;
+}
 
 .uploaded-image {
   width: 100%;
@@ -155,14 +165,4 @@ h3 {
   align-items: center;
   border: 1px solid grey;
   border-radius: 10px;
-}
-
-.publicity {
-  height: 15%;
-  width: 100%;
-}
-
-#publicity-image {
-  height: 100%;
-  width: 100%;
 }
