@@ -156,3 +156,13 @@ h3 {
   border: 1px solid grey;
   border-radius: 10px;
 }
+
+.publicity {
+  height: 15%;
+  width: 100%;
+}
+
+#publicity-image {
+  height: 100%;
+  width: 100%;
+}

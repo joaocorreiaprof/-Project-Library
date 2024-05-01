@@ -71,14 +71,16 @@ function readedBook(value) {
 }
 
 // Publicity image
-
-let images = ["./image1.jpg", "./image2.jpg", "./image3.jpg"];
-
-setInterval(changeImage, 5000);
+let images = ["images/book1.jpg", "images/book2.jpg", "images/book3.jpg"];
 
 function changeImage() {
-  let img = document.getElementById("image");
-
+  let img = document.getElementById("publicity-image");
   let randomIndex = Math.floor(Math.random() * images.length);
   img.src = images[randomIndex];
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  changeImage();
+
+  setInterval(changeImage, 5000);
+});
