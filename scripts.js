@@ -29,6 +29,7 @@ document
     let author = document.getElementById("author").value;
     let pages = document.getElementById("pages").value;
     let readed = document.getElementById("readed").checked;
+    let file = document.getElementById("upload-img").files[0];
 
     addBookToLibrary(title, author, pages, readed);
 
@@ -41,8 +42,43 @@ document
 
     gridContainer.appendChild(newBook);
 
-    let para = document.createElement("p");
-    para.innerHTML = title;
+    let imgElement = document.createElement("img");
+    imgElement.src = URL.createObjectURL(file);
+    imgElement.classList.add("uploaded-image");
+    newBook.appendChild(imgElement);
 
-    newBook.appendChild(para);
+    let formTitle = document.createElement("p");
+    formTitle.innerHTML = title;
+    newBook.appendChild(formTitle);
+
+    let formAuthor = document.createElement("p");
+    formAuthor.innerHTML = author;
+    newBook.appendChild(formAuthor);
+
+    let formPages = document.createElement("p");
+    formPages.innerHTML = pages + " pages";
+    newBook.appendChild(formPages);
+
+    let formReaded = document.createElement("p");
+    formReaded.innerHTML = readedBook(readed);
+    newBook.appendChild(formReaded);
   });
+
+//Function to check if book is readed
+
+function readedBook(value) {
+  return value ? "Readed" : "Not readed";
+}
+
+// Publicity image
+
+let images = ["./image1.jpg", "./image2.jpg", "./image3.jpg"];
+
+setInterval(changeImage, 5000);
+
+function changeImage() {
+  let img = document.getElementById("image");
+
+  let randomIndex = Math.floor(Math.random() * images.length);
+  img.src = images[randomIndex];
+}
