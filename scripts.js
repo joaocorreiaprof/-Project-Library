@@ -72,11 +72,12 @@ function readedBook(value) {
 
 // Publicity image
 let images = ["images/book1.jpg", "images/book2.jpg", "images/book3.jpg"];
+let currentIndex = 0;
 
 function changeImage() {
   let img = document.getElementById("publicity-image");
-  let randomIndex = Math.floor(Math.random() * images.length);
-  img.src = images[randomIndex];
+  img.src = images[currentIndex];
+  currentIndex = (currentIndex + 1) % images.length;
 }
 
 document.addEventListener("DOMContentLoaded", function () {

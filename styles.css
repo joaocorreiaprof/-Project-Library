@@ -138,7 +138,7 @@ input {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: 10%;
+  height: 100px;
 }
 
 .user-image {
@@ -170,7 +170,7 @@ input {
 /*Publicity*/
 
 .publicity {
-  height: 32vh;
+  height: 40vh;
   width: 100%;
 }
 
@@ -184,12 +184,11 @@ input {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(5, 20%);
-  margin-top: 50px;
 }
 
 .uploaded-image {
   width: 100%;
-  height: 300px;
+  height: 280px;
 }
 
 .book {
@@ -197,6 +196,27 @@ input {
   flex-direction: column;
   width: 200px;
   align-items: center;
-  border: 1px solid grey;
   border-radius: 10px;
+  margin-top: 50px;
+  margin-left: 60px;
+}
+
+.title {
+  border-bottom: 1px solid black;
+  font-size: 16px;
+  font-weight: bold;
+  padding-bottom: 1px;
+}
+
+.author {
+  font-style: italic;
+  font-size: 13px;
+}
+
+.pages {
+  font-size: 13px;
+}
+
+.status {
+  font-size: 12px;
 }
