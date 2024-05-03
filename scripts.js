@@ -7,12 +7,7 @@ function Book(title, author, pages, readed) {
   this.readed = readed;
 }
 
-Book.prototype.consoleInfo = function () {
-  console.log(this.title);
-  console.log(this.author);
-  console.log(this.pages);
-  console.log(this.readed);
-};
+Book.prototype.consoleInfo = function () {};
 
 function addBookToLibrary(title, author, pages, readed) {
   let newBook = new Book(title, author, pages, readed);
@@ -62,6 +57,18 @@ document
     let formReaded = document.createElement("p");
     formReaded.innerHTML = readedBook(readed);
     newBook.appendChild(formReaded);
+
+    let deleteButton = document.createElement("button");
+    deleteButton.innerHTML = "Delete";
+    deleteButton.classList.add("delete-button");
+    deleteButton.addEventListener("click", function () {
+      let bookDiv = this.parentElement; // Get the parent book container div
+      let index = Array.from(gridContainer.children).indexOf(bookDiv); // Find index of book div in gridContainer
+      myLibrary.splice(index, 1); // Remove the book from myLibrary array
+      bookDiv.remove(); // Remove the book div from the DOM
+    });
+
+    newBook.appendChild(deleteButton);
   });
 
 //Function to check if book is readed
