@@ -167,6 +167,12 @@ input {
   border-radius: 15px;
 }
 
+.delete-button {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+
 /*Publicity*/
 
 .publicity {

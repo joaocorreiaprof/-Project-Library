@@ -18,7 +18,7 @@ function addBookToLibrary(title, author, pages, readed) {
 document
   .getElementById("bookForm")
   .addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent the form from submitting
+    event.preventDefault();
 
     let title = document.getElementById("title").value;
     let author = document.getElementById("author").value;
@@ -27,6 +27,10 @@ document
     let file = document.getElementById("upload-img").files[0];
 
     addBookToLibrary(title, author, pages, readed);
+
+    //test for img check
+
+    function checkImg() {}
 
     //create the book divs
 
@@ -38,38 +42,58 @@ document
     gridContainer.appendChild(newBook);
 
     let imgElement = document.createElement("img");
-    imgElement.src = URL.createObjectURL(file);
+    if (file) {
+      imgElement.src = URL.createObjectURL(file);
+    } else {
+      imgElement.src = "./images/book4.jpg";
+    }
     imgElement.classList.add("uploaded-image");
     newBook.appendChild(imgElement);
 
     let formTitle = document.createElement("p");
     formTitle.innerHTML = title;
+    formTitle.classList.add("title");
     newBook.appendChild(formTitle);
 
     let formAuthor = document.createElement("p");
     formAuthor.innerHTML = author;
+    formAuthor.classList.add("author");
     newBook.appendChild(formAuthor);
 
     let formPages = document.createElement("p");
     formPages.innerHTML = pages + " pages";
+    formPages.classList.add("pages");
     newBook.appendChild(formPages);
 
     let formReaded = document.createElement("p");
     formReaded.innerHTML = readedBook(readed);
+    formReaded.classList.add("status");
     newBook.appendChild(formReaded);
 
     let deleteButton = document.createElement("button");
     deleteButton.innerHTML = "Delete";
     deleteButton.classList.add("delete-button");
     deleteButton.addEventListener("click", function () {
-      let bookDiv = this.parentElement; // Get the parent book container div
-      let index = Array.from(gridContainer.children).indexOf(bookDiv); // Find index of book div in gridContainer
-      myLibrary.splice(index, 1); // Remove the book from myLibrary array
-      bookDiv.remove(); // Remove the book div from the DOM
+      let bookDiv = this.parentElement;
+      let index = Array.from(gridContainer.children).indexOf(bookDiv);
+      myLibrary.splice(index, 1);
+      bookDiv.remove();
     });
 
     newBook.appendChild(deleteButton);
   });
+
+// Delete default books
+
+let deleteButtons = document.querySelectorAll(".delete-button");
+
+deleteButtons.forEach(function (button) {
+  button.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    button.parentElement.remove();
+  });
+});
 
 //Function to check if book is readed
 
@@ -92,3 +116,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
   setInterval(changeImage, 5000);
 });
+
+let removeButtons = document.querySelector(".delete-button");
